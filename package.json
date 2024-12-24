@@ -2,7 +2,7 @@
   "name": "vscode-new-files",
   "displayName": "Multiple Files Creator",
   "description": "Create multiple files at once using a comma-separated list",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "brunos3d",
   "repository": {
     "type": "git",
@@ -14,6 +14,7 @@
   "categories": [
     "Other"
   ],
+  "icon": "images/icon.png",
   "activationEvents": [
     "onStartupFinished"
   ],
