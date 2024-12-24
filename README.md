@@ -28,48 +28,48 @@ The Multiple Files Creator extension for Visual Studio Code allows you to create
 
 1. Open the Command Palette by pressing `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS).
 2. Type `New Files...` and select the `New Files...` command.
-3. Enter the file names separated by commas. For example: `use-boolean.tsx, hooks/use-string.tsx, use-number.tsx`.
+3. Enter the file names separated by commas. For example: `file1.tsx,hooks/file2.tsx,file3.tsx`.
 
 ### Using the Context Menu
 
 1. Right-click on a folder in the Explorer view.
 2. Select `New Files...` from the context menu.
-3. Enter the file names separated by commas. For example: `use-boolean, hooks/use-string, use-number | .tsx`.
+3. Enter the file names separated by commas. For example: `file1,hooks/file2,file3|.tsx`.
 
 ## Examples
 
 ### Basic Usage
 
-- Input: `use-boolean.tsx, hooks/use-string.tsx, use-number.tsx`
+- Input: `file1.tsx,hooks/file2.tsx,file3.tsx`
 - Result:
-  - `use-boolean.tsx`
-  - `hooks/use-string.tsx`
-  - `use-number.tsx`
+  - `file1.tsx`
+  - `hooks/file2.tsx`
+  - `file3.tsx`
 
 ### Using Pipe Syntax for Extensions
 
-- Input: `use-boolean, hooks/use-string, use-number | .tsx`
+- Input: `file1,hooks/file2,file3|.tsx`
 - Result:
-  - `use-boolean.tsx`
-  - `hooks/use-string.tsx`
-  - `use-number.tsx`
+  - `file1.tsx`
+  - `hooks/file2.tsx`
+  - `file3.tsx`
 
 ### Creating Nested Folders
 
-- Input: `use-boolean.tsx, hooks/use-string.tsx, use-number.tsx`
+- Input: `file1.tsx,hooks/file2.tsx,file3.tsx`
 - Result:
 
-  - `use-boolean.tsx`
+  - `file1.tsx`
   - `hooks` (folder)
-    - `use-string.tsx`
-  - `use-number.tsx`
+    - `file2.tsx`
+  - `file3.tsx`
 
-- Input: `use-boolean, hooks/use-string, use-number | .tsx`
+- Input: `file1,hooks/file2,file3|.tsx`
 - Result:
-  - `use-boolean.tsx`
+  - `file1.tsx`
   - `hooks` (folder)
-    - `use-string.tsx`
-  - `use-number.tsx`
+    - `file2.tsx`
+  - `file3.tsx`
 
 ## Contributing
 
