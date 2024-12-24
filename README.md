@@ -13,7 +13,7 @@ The Multiple Files Creator extension for Visual Studio Code allows you to create
 
 ## Demo
 
-![Demo Video](docs/demo.mp4)
+![Demo Video](docs/demo.gif)
 
 ## Installation
 
