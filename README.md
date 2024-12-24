@@ -1,43 +1,80 @@
 # Multiple Files Creator
 
-// ...existing content...
+## Overview
 
-## Testing the Extension Locally
+The Multiple Files Creator extension for Visual Studio Code allows you to create multiple files at once using a comma-separated list. This is especially useful for quickly setting up project structures.
 
-To test this extension locally in your VS Code, follow these steps:
+## Features
 
-1. **Clone the repository**:
+- Create multiple files in one go.
+- Supports nested folder structures.
+- Optionally specify file extensions for all files using a pipe (`|`) syntax.
+- Adds a "New Files..." option in the context menu of the Explorer view.
 
-   ```sh
-   git clone https://github.com/your-username/vscode-new-files.git
-   cd vscode-new-files
-   ```
+## Demo
 
-2. **Install dependencies**:
+![Demo Video](docs/demo.gif)
 
-   ```sh
-   npm install
-   ```
+## Installation
 
-3. **Compile the extension**:
+1. Open Visual Studio Code.
+2. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
+3. Search for "Multiple Files Creator".
+4. Click "Install" to install the extension.
 
-   ```sh
-   npm run compile
-   ```
+## Usage
 
-4. **Open the project in VS Code**:
+### Using the Command Palette
 
-   ```sh
-   code .
-   ```
+1. Open the Command Palette by pressing `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS).
+2. Type `New Files...` and select the `New Files...` command.
+3. Enter the file names separated by commas. For example: `use-boolean.tsx, hooks/use-string.tsx, use-number.tsx`.
 
-5. **Run the extension**:
+### Using the Context Menu
 
-   - Press `F5` to open a new VS Code window with your extension loaded.
-   - In the new window, you can use the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and search for `New Files...` to test the extension.
+1. Right-click on a folder in the Explorer view.
+2. Select `New Files...` from the context menu.
+3. Enter the file names separated by commas. For example: `use-boolean, hooks/use-string, use-number | .tsx`.
 
-6. **Make changes and test**:
-   - If you make changes to the code, you can recompile using `npm run compile` or use `npm run watch` to automatically compile on changes.
-   - Press `F5` again to reload the extension with the latest changes.
+## Examples
 
-> **Note**: Ensure that the command `multipleFiles.create` is correctly registered and that the activation event is set to `onCommand:multipleFiles.create` in the `package.json` file.
+### Basic Usage
+
+- Input: `use-boolean.tsx, hooks/use-string.tsx, use-number.tsx`
+- Result:
+  - `use-boolean.tsx`
+  - `hooks/use-string.tsx`
+  - `use-number.tsx`
+
+### Using Pipe Syntax for Extensions
+
+- Input: `use-boolean, hooks/use-string, use-number | .tsx`
+- Result:
+  - `use-boolean.tsx`
+  - `hooks/use-string.tsx`
+  - `use-number.tsx`
+
+### Creating Nested Folders
+
+- Input: `use-boolean.tsx, hooks/use-string.tsx, use-number.tsx`
+- Result:
+
+  - `use-boolean.tsx`
+  - `hooks` (folder)
+    - `use-string.tsx`
+  - `use-number.tsx`
+
+- Input: `use-boolean, hooks/use-string, use-number | .tsx`
+- Result:
+  - `use-boolean.tsx`
+  - `hooks` (folder)
+    - `use-string.tsx`
+  - `use-number.tsx`
+
+## Contributing
+
+If you find any issues or have suggestions for new features, please open an issue or submit a pull request on [GitHub](https://github.com/brunos3d/vscode-new-files).
+
+## License
+
+This extension is licensed under the [MIT License](LICENSE).
